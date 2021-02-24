@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Ordering System</title>
+    <style type="text/css">
+      #nav {
+        background-color: green;
+      }
+      #nav img {
+        margin-left: 45%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <img
+        src="https://d27028dliefpk3.cloudfront.net/static/brand/MasaiLogo.svg"
+        alt=""
+      />
+    </div>
+    <div id="main">
+      <button id="btn" onclick="btn()">Order Food</button>
+      <img
+        id="img"
+        src="https://media.cntraveler.com/photos/5f5fad3f7557491753644e3b/3:2/w_4050,h_2700,c_limit/50States50Cuisines-2020-AmberDay-Lede%20Option.jpg"
+        alt=""
+        style="display: none; width: 28%; margin-left: 35%"
+      />
+    </div>
+
+    <script>
+      function btn() {
+        var main = document.getElementById("main");
+        var promise = new Promise(function (resolve, reject) {
+          var f = true;
+          var id = 5;
+          if (f == true) {
+            setTimeout(function () {
+              resolve("Order is ready");
+              var img = document.getElementById("img");
+              img.style.display = "block";
+            }, 5000);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
